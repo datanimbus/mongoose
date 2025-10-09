@@ -1,5 +1,5 @@
 {
-  "name": "@datanimbus/dn-mongoose",
+  "name": "@datanimbus/mongoose",
   "description": "Mongoose MongoDB ODM",
   "version": "6.13.9",
   "author": "Guillermo Rauch <guillermo@learnboost.com>",
