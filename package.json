@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "mongoose",
   "description": "Mongoose MongoDB ODM",
   "version": "8.19.1",
@@ -150,5 +150,8 @@
       "module": "commonjs",
       "target": "ES2017"
     }
+  },
+  "overrides": {
+    "lodash": "^4.18.1"
   }
 }
