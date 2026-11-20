@@ -1,3 +1,33 @@
+6.13.13 / 2026-11-16
+====================
+ * fix(isBsonType): ignore user-specified _bsontype property
+ * fix(query): hardening for sanitizeProjection
+ * fix(query): make sanitizeFilter catch any fields that start with $ in top-level filter to avoid bypass using $_internalSchemaXor and other MongoDB internal expressions
+
+6.13.12 / 2026-10-23
+====================
+ * fix: avoid walking into inherited properties like `toString` when hydrating documents, setting dotted paths, and merging updates
+ * fix: only use own properties when looking up discriminators by key
+ * fix(schema): disallow setting special properties via virtual()
+ * fix(query): respect connection-level sanitizeFilter in queries
+ * fix(query): disallow special properties like `__proto__` as paths in where() and mod()
+ * fix(deps): upgrade mquery -> 4.0.4 to avoid prototype pollution with query helpers like gt() and in()
+
+6.13.11 / 2026-08-10
+====================
+ * fix(query): apply sanitizeFilter in countDocuments and cursor
+
+6.13.10 / 2026-06-22
+====================
+ * fix(document): add additional defensive checks for special properties in Document.prototype.get()
+ * fix(schema): avoid returning inherited properties from schema path lookups
+
+6.13.9 / 2026-02-04
+===================
+ * fix: handle other top-level query operators in sanitizeFilter
+ * types(aggregate): add $firstN, $lastN, $bottom, $bottomN, $minN and $maxN operators #15303 #15299
+ * docs(compatibility): add note that Mongoose ^6.5 works with MongoDB server 7.x #15427
+
 6.13.8 / 2025-01-20
 ===================
  * chore: remove coverage output from bundle
